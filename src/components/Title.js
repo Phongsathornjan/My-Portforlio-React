@@ -21,7 +21,7 @@ export const Title = () => {
             <br/>
             <div className="social-icon">
               <a href="https://www.facebook.com/profile.php?id=100007374097910" target="_blank" rel="noreferrer"><img src={`${process.env.PUBLIC_URL}/icons/facebook_icon.svg`} alt="facebook" style={{width: '40px',height: '42px'}}/></a>
-              <a href="https://github.com/Phongsathornjan" target="_blank" rel="noreferrer" className="ms-3" style={{color: '#fff'}}><img src={`${process.env.PUBLIC_URL}/icons/Github_icon.png`} alt="facebook" style={{width: '40px',height: '42px'}}/></a>
+              <a href="https://github.com/Phongsathornjan" target="_blank" rel="noreferrer" className="ms-3" style={{color: '#fff'}}><img src={`${process.env.PUBLIC_URL}/icons/Github_icon.svg`} alt="github" style={{width: '40px',height: '42px'}}/></a>
             </div>
           </div>
         </div>
