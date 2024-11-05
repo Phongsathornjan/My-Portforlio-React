@@ -1,0 +1,23 @@
+#experience {
+  margin-left: 10%;
+  margin-top: 100px;
+  font-family: monospace;
+}
+
+#card-experience {
+  background: rgb(19, 4, 40);
+  background: linear-gradient(
+    90deg,
+    rgba(19, 4, 40, 0.3) 7%,
+    rgba(37, 16, 67, 0.3) 34%,
+    rgba(56, 18, 109, 0.3) 57%
+  );
+  padding: 20px;
+  border: 1px solid white;
+  border-radius: 20px;
+  transition: transform 0.3s ease;
+}
+
+#card-experience:hover {
+  transform: scale(1.1);
+}

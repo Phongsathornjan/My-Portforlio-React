@@ -1,0 +1,163 @@
+.image-container {
+    position: relative; 
+    width: 300px;      
+    height: 300px;
+  }
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.background-experience-image {
+  position: absolute;
+  margin-left: 400px;
+  margin-top: 300px;
+  z-index: 1;
+}
+
+/* รูปภาพที่ซ้อนทับ */
+.overlay-image {
+  position: absolute;
+  top: 80px;
+  left: 60px;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  opacity: 1;
+  transition: transform 0.3s ease;
+}
+
+#overlay{
+  position: absolute;
+  width: 570px;
+  height: 192px;
+  z-index: 2;
+  opacity: 1;
+  transition: transform 0.3s ease;
+}
+
+.overlay-image:hover {
+  transform: scale(1.1);
+}
+
+.Arrow-overlay {
+    position: absolute;
+    top: 20px;
+    left: 200px;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    opacity: 1; 
+  }
+
+a:link {
+    text-decoration: none;
+}
+
+.social-icon {
+    display: inline-block;
+    margin-left: 14px;
+    margin-top: 20px;
+}
+.social-icon a {
+    width: 42px;
+    height: 42px;
+    background: rgba(217, 217, 217, 0.1);
+    display: inline-flex;
+    border-radius: 50%;
+    margin-right: 6px;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+.social-icon a::before {
+    content: "";
+    width: 42px;
+    height: 42px;
+    position: absolute;
+    background-color: #ffffff;
+    border-radius: 50%;
+    transform: scale(0);
+	  transition: 0.3s ease-in-out;
+}
+.social-icon a:hover::before {
+    transform: scale(1);
+}
+.social-icon a img {
+	width: 40%;
+	z-index: 1;
+	transition: 0.3s ease-in-out;
+}
+.social-icon a:hover img {
+	filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(95%) contrast(86%);
+}
+
+#text-animation{
+  animation: text-animation 10s ease 0s infinite normal none;
+}
+
+#scale-up{
+  animation: scale-up 2s ease 0s normal none;
+}
+
+#blink{
+  animation: blink 3s ease 0s infinite normal none;
+}
+
+@keyframes text-animation {
+  0%,
+  100% {
+	transform: translateY(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70% {
+	transform: translateY(-8px);
+  }
+
+  20%,
+  40%,
+  60% {
+	transform: translateY(8px);
+  }
+
+  80% {
+	transform: translateY(6.4px);
+  }
+
+  90% {
+	transform: translateY(-6.4px);
+  }
+}
+
+@keyframes scale-up {
+  0% {
+	transform: scale(0.5);
+  }
+
+  100% {
+	transform: scale(1);
+  }
+}
+
+@keyframes blink {
+  0% {
+	opacity: 1;
+  }
+
+  50% {
+	opacity: 0.2;
+  }
+
+  100% {
+	opacity: 1;
+  }
+}
