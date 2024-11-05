@@ -17,11 +17,10 @@ export const Title = () => {
           <div className="ms-2 mt-5">
             <h2 id="text-hover">I'm a Engineer Student who interested in programming. </h2>
             <p id="text-hover"> Currently, Study in KMUTNB university in Thailand. </p>
-            <p id="text-hover" style={{fontSize:'18px'}}><MdOutlineEmail /> Email : Phongsathornjanjamsai@gmail.com</p>
-            <br/>
-            <div className="social-icon">
-              <a href="https://www.facebook.com/profile.php?id=100007374097910" target="_blank" rel="noreferrer"><img src={`${process.env.PUBLIC_URL}/icons/facebook_icon.svg`} alt="facebook" style={{width: '40px',height: '42px'}}/></a>
-              <a href="https://github.com/Phongsathornjan" target="_blank" rel="noreferrer" className="ms-3" style={{color: '#fff'}}><img src={`${process.env.PUBLIC_URL}/icons/Github_icon.svg`} alt="github" style={{width: '40px',height: '42px'}}/></a>
+            <div className="d-flex">
+              <p id="text-hover" style={{fontSize:'18px',marginRight: '20px'}}><MdOutlineEmail /> Email : Phongsathornjanjamsai@gmail.com</p>
+              <a href="https://www.facebook.com/profile.php?id=100007374097910" target="_blank" rel="noreferrer"><img src={`${process.env.PUBLIC_URL}/icons/facebook-icon.png`} alt="facebook" style={{width: '55px',height: '50px'}} id="icon-hover"/></a>
+              <a href="https://github.com/Phongsathornjan" target="_blank" rel="noreferrer" className="ms-3" style={{color: '#fff'}}><img src={`${process.env.PUBLIC_URL}/icons/Github_icon.svg`} alt="github" style={{width: '40px',height: '42px',marginTop : '4px'}} id="icon-hover"/></a>
             </div>
           </div>
         </div>
