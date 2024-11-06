@@ -2,6 +2,22 @@ import React from "react";
 import '../css/title.css'
 
 import { MdOutlineEmail } from "react-icons/md";
+const ResumeLocation = '/files/Resume.pdf';
+const TranscriptLocation = '/files/Transcript.pdf';
+
+const handleOnClickResume = () => {
+  const newWindow = window.open(ResumeLocation, '_blank');
+  if (newWindow) {
+    newWindow.document.title = 'Resume'; 
+  }
+};
+
+const handleOnClickTranscript = () => {
+  const newWindow = window.open(TranscriptLocation, '_blank');
+  if (newWindow) {
+    newWindow.document.title = 'Transcript'; 
+  }
+};
 
 export const Title = () => {
   return (
@@ -17,10 +33,30 @@ export const Title = () => {
           <div className="ms-2 mt-5">
             <h2 id="text-hover">I'm a Engineer Student who interested in programming. </h2>
             <p id="text-hover"> Currently, Study in KMUTNB university in Thailand. </p>
+            <p id="text-hover" style={{fontSize:'18px',marginRight: '20px'}}><MdOutlineEmail/> Email : Phongsathornjanjamsai@gmail.com</p>
             <div className="d-flex">
-              <p id="text-hover" style={{fontSize:'18px',marginRight: '20px'}}><MdOutlineEmail /> Email : Phongsathornjanjamsai@gmail.com</p>
-              <a href="https://github.com/Phongsathornjan" target="_blank" ><img src="https://seeklogo.com/images/G/github-icon-logo-E5FF767098-seeklogo.com.png" style={{width: '45px',height: '42px'}} id="icon-hover"/></a>
-              <a href="https://www.facebook.com/profile.php?id=100007374097910" target="_blank"><img src={`${process.env.PUBLIC_URL}/icons/facebook-icon.png`} style={{width: '45px',height: '42px',marginLeft: '20px'}} id="icon-hover"/></a>
+              <button className="btn btn-outline-danger text-white" onClick={handleOnClickResume}>Resume</button>
+              <button className="btn btn-outline-primary text-white ms-4" onClick={handleOnClickTranscript}>Transcript</button>
+
+              <a href="https://github.com/Phongsathornjan" target="_blank" rel="noopener noreferrer">
+                <img 
+                  src="https://seeklogo.com/images/G/github-icon-logo-E5FF767098-seeklogo.com.png" 
+                  style={{ width: '45px', height: '42px' }} 
+                  className="ms-4" 
+                  id="icon-hover" 
+                  alt="GitHub icon"
+                />
+              </a>
+
+              <a href="https://www.facebook.com/profile.php?id=100007374097910" target="_blank" rel="noopener noreferrer">
+                <img 
+                  src={`${process.env.PUBLIC_URL}/icons/facebook-icon.png`} 
+                  style={{ width: '45px', height: '42px', marginLeft: '20px' }} 
+                  id="icon-hover" 
+                  alt="Facebook icon"
+                />
+              </a>
+              
             </div>
           </div>
         </div>

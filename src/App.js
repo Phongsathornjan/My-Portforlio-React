@@ -4,6 +4,7 @@ import { Title } from "./components/Title";
 import { Cover } from "./components/Cover";
 import { Experience } from "./components/Experience";
 import { MouseEffect } from "./components/MouseEffect";
+import { Skill } from "./components/Skill";
 
 import "./css/app.css";
 
@@ -29,8 +30,9 @@ function App() {
         />
         <Cover />
         <Experience />
-        <MouseEffect/>
+        <Skill/>
       </div>
+      <MouseEffect/>
     </div>
   );
 }
