@@ -45,7 +45,6 @@ export const Project = () => {
 
   return (
     <div className="project">
-      <div>
         <div className="justify-content-center">
           <div>
             <TrackVisibility partialVisibility={true}>
@@ -94,7 +93,6 @@ export const Project = () => {
             </Carousel>
           </div>
         </div>
-      </div>
     </div>
   );
 };
