@@ -16,7 +16,7 @@ export const MouseEffect = () => {
   }, []);
 
   return (
-    <div style={{ position: 'relative', height: '100vh', cursor: 'none' }}>
+    <div>
       {/* วงกลมเล็ก */}
       <div
         style={{

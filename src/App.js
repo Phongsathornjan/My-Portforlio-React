@@ -7,7 +7,10 @@ import { MouseEffect } from "./components/MouseEffect";
 import { Skill } from "./components/Skill";
 import { Project } from "./components/Project";
 
+import TrackVisibility from "react-on-screen";
+
 import "./css/app.css";
+import {Footer} from "./components/Footer";
 
 function App() {
   return (
@@ -15,26 +18,47 @@ function App() {
       id="main"
       style={{
         backgroundImage: `url(${process.env.PUBLIC_URL}/banner-bg.png)`,
-        backgroundSize: '100% auto', 
-        backgroundPosition: 'top center',
+        backgroundSize: "100% auto",
+        backgroundPosition: "top center",
       }}
     >
+      <MouseEffect />
       <Navbar />
       <div className="container">
-        <Title />
-        <img
-          src={`${process.env.PUBLIC_URL}/Gradient.png`}
-          alt="/Gradient"
-          className="background-experience-image"
-          style={{ width: "625px", height: "700px" }}
-          id="blink"
-        />
-        <Cover />
-        <Experience />
-        <Skill/>
-        <Project/>
+        <TrackVisibility partialVisibility={true}>
+          {({ isVisible }) => (
+            <div className={`fadeIn ${isVisible ? "visible" : ""}`}>
+              <Title />
+            </div>
+          )}
+        </TrackVisibility>
+
+        <TrackVisibility partialVisibility={true}>
+          {({ isVisible }) => (
+            <div className={`fadeIn ${isVisible ? "visible" : ""}`}>
+              <Cover />
+            </div>
+          )}
+        </TrackVisibility>
+
+        <TrackVisibility partialVisibility={true}>
+          {({ isVisible }) => (
+            <div className={`fadeIn ${isVisible ? "visible" : ""}`}>
+              <Experience />
+            </div>
+          )}
+        </TrackVisibility>
+
+        <TrackVisibility partialVisibility={true}>
+          {({ isVisible }) => (
+            <div className={`fadeIn ${isVisible ? "visible" : ""}`}>
+              <Skill />
+            </div>
+          )}
+        </TrackVisibility>
+        <Project />
       </div>
-      <MouseEffect/>
+      <Footer/>
     </div>
   );
 }

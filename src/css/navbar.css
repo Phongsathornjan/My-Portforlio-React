@@ -8,7 +8,6 @@
 }
 
 #nav-bg {
-    background-color: rgba(26, 11, 46, 1); 
     position: sticky;
     top: 0;
     transition: background-color 0.3s ease;
